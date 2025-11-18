@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Whanex Brand Colors */
+  --midnight-navy: #050B19;
+  --cyber-blue: #2563EB;
+  --neon-cyan: #22D3EE;
+  --slate-grey: #1E293B;
+  --soft-white: #F9FAFB;
+  --cool-grey: #9CA3AF;
+
+  /* State Colors */
+  --success-green: #22C55E;
+  --warning-amber: #FACC15;
+  --alert-red: #F97373;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Custom Color Palette */
+  --color-midnight: var(--midnight-navy);
+  --color-cyber: var(--cyber-blue);
+  --color-cyan: var(--neon-cyan);
+  --color-slate: var(--slate-grey);
+  --color-white: var(--soft-white);
+  --color-grey: var(--cool-grey);
+  --color-success: var(--success-green);
+  --color-warning: var(--warning-amber);
+  --color-alert: var(--alert-red);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Fonts */
+  --font-heading: var(--font-poppins);
+  --font-body: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--midnight-navy);
+  color: var(--soft-white);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--slate-grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyber-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Logo Gradient Animation */
+@keyframes gradient-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo-gradient-text {
+  background: linear-gradient(90deg, #22D3EE 0%, #2563EB 30%, #22D3EE 60%, #2563EB 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shimmer 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Better touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Reduce motion for better mobile performance */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Optimize font sizes for mobile readability */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Better spacing on mobile */
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 17px;
+  }
 }
