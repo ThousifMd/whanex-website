@@ -22,6 +22,23 @@ export default function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // Get the plan from URL parameters
+  const [contactEmail, setContactEmail] = useState('agent@whanex.io');
+
+  useState(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const plan = params.get('plan');
+
+      // Starter and Growth use analyst@whanex.io, Enterprise uses agent@whanex.io
+      if (plan === 'starter' || plan === 'growth') {
+        setContactEmail('analyst@whanex.io');
+      } else {
+        setContactEmail('agent@whanex.io');
+      }
+    }
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, you'd send this to your backend
@@ -219,27 +236,11 @@ export default function Contact() {
                 <div>
                   <h4 className="text-white font-semibold mb-1">Email</h4>
                   <a
-                    href="mailto:vk2045@whanex.com"
+                    href="mailto:agent@whanex.io"
                     className="text-grey hover:text-cyan transition-colors"
                   >
-                    vk2045@whanex.com
+                    agent@whanex.io
                   </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <PhoneIcon className="w-6 h-6 text-cyan mt-1" />
-                <div>
-                  <h4 className="text-white font-semibold mb-1">Phone</h4>
-                  <a
-                    href="tel:+15551234567"
-                    className="text-grey hover:text-cyan transition-colors"
-                  >
-                    +1 (555) 123-4567
-                  </a>
-                  <p className="text-grey text-sm mt-1">
-                    Monday - Friday, 9am - 6pm EST
-                  </p>
                 </div>
               </div>
             </div>

@@ -26,7 +26,7 @@ export default function Pricing() {
   const tiers: PricingTier[] = [
     {
       name: 'Starter',
-      price: '$2,500',
+      price: 'Custom',
       description: 'Essential security for early-stage startups',
       features: [
         'Security assessment and risk analysis',
@@ -41,13 +41,13 @@ export default function Pricing() {
     },
     {
       name: 'Growth',
-      price: '$6,500',
+      price: 'Custom',
       description: 'Complete security for scaling companies',
       features: [
         'Everything in Starter, plus:',
         '24/7 SOC monitoring and alerting',
         'SIEM and threat intelligence',
-        'Compliance support (SOC 2, GDPR)',
+        'Compliance support',
         'Incident response and forensics',
         'Quarterly penetration testing',
         'Dedicated security account manager',
@@ -95,7 +95,7 @@ export default function Pricing() {
     {
       question: 'Do you support compliance for international regulations?',
       answer:
-        'Yes, we support GDPR, CCPA, PIPEDA, and other international data protection regulations in addition to SOC 2 and HIPAA.',
+        'Yes, we support various international data protection regulations and industry-specific compliance frameworks.',
     },
   ];
 
@@ -186,7 +186,7 @@ export default function Pricing() {
               <Button
                 variant={tier.highlighted ? 'primary' : 'secondary'}
                 className="w-full"
-                href="/contact"
+                href={`/contact?plan=${tier.name.toLowerCase()}`}
               >
                 {tier.cta}
               </Button>
@@ -245,7 +245,7 @@ export default function Pricing() {
             {
               name: 'Compliance Audit',
               price: '$5,000',
-              description: 'SOC 2 / ISO 27001 audit support',
+              description: 'Industry standard audit support',
               icon: DocumentCheckIcon,
               period: 'per audit',
             },

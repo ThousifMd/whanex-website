@@ -103,11 +103,11 @@ export default function Services() {
       icon: <DocumentCheckIcon className="w-8 h-8" />,
       tagline: 'Pass audits, win enterprise deals',
       description:
-        'Achieving compliance with SOC 2, GDPR, HIPAA, and other frameworks is critical for enterprise sales. We guide you through certification and maintain ongoing compliance.',
+        'Achieving compliance with industry standards and regulatory frameworks is critical for enterprise sales. We guide you through certification and maintain ongoing compliance.',
       features: [
-        'SOC 2 Type II certification support',
-        'GDPR and data privacy compliance',
-        'HIPAA compliance for healthcare data',
+        'Compliance certification support',
+        'Data privacy and protection compliance',
+        'Industry-specific regulatory compliance',
         'Policy development and documentation',
         'Employee security training programs',
         'Audit preparation and support',
@@ -155,12 +155,12 @@ export default function Services() {
       answer: 'Our Monitoring & Incident Response service includes: real-time threat detection via SIEM, automated alerting, on-call incident response engineers, weekly threat intelligence reports, and monthly security posture reviews. We monitor your entire infrastructure continuously.',
     },
     {
-      question: 'How long does SOC 2 certification typically take?',
-      answer: 'From start to Type II certification: 3-6 months. We help you build controls, document policies, collect evidence, and work with auditors. Timeline depends on your starting security maturity and how quickly you can implement recommendations.',
+      question: 'How long does compliance certification typically take?',
+      answer: 'From start to full certification: 3-6 months. We help you build controls, document policies, collect evidence, and work with auditors. Timeline depends on your starting security maturity and how quickly you can implement recommendations.',
     },
     {
       question: 'Do you provide compliance support for regulated industries?',
-      answer: 'Yes. We support HIPAA for healthcare, PCI-DSS for payment processing, and industry-specific frameworks. Our Governance & Compliance service includes gap assessments, control implementation, and ongoing compliance monitoring.',
+      answer: 'Yes. We support various industry standards for healthcare, payment processing, and other regulated sectors. Our Governance & Compliance service includes gap assessments, control implementation, and ongoing compliance monitoring.',
     },
   ];
 

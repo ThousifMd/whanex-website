@@ -70,8 +70,8 @@ export default function Home() {
       answer: 'Our team monitors systems 24/7. For Growth and Enterprise plans, we respond to critical incidents within 4 hours. We have on-call security engineers ready to handle emergencies at any time.',
     },
     {
-      question: 'Do I need to be SOC 2 compliant to work with enterprise clients?',
-      answer: 'While not always legally required, SOC 2 compliance has become a de facto standard for enterprise sales. Most large customers require it in their vendor security questionnaires. We can help you achieve SOC 2 Type II certification in 3-6 months.',
+      question: 'Do I need to be compliant to work with enterprise clients?',
+      answer: 'While not always legally required, industry-standard compliance has become a de facto standard for enterprise sales. Most large customers require it in their vendor security questionnaires. We can help you achieve full certification in 3-6 months.',
     },
     {
       question: 'What makes Whanex different from hiring a full-time security engineer?',
@@ -96,14 +96,13 @@ export default function Home() {
         {/* Animated Background */}
         <FloatingElements />
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Content */}
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex gap-2 mb-6">
+            <div className="flex gap-2 mb-6 justify-center">
               <Badge>For Startups</Badge>
               <Badge variant="success">24/7 Monitoring</Badge>
             </div>
@@ -115,81 +114,19 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-grey mb-8 max-w-xl">
+            <p className="text-lg md:text-xl text-grey mb-8 max-w-3xl mx-auto">
               Whanex gives startups and small businesses a plug-in security team,
               combining modern tooling, clear policies, and continuous monitoring
               so they can grow with confidence instead of fear.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" href="/contact">
                 Book Free Assessment
               </Button>
               <Button size="lg" variant="secondary" href="/solutions">
                 See How It Works
               </Button>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="flex items-center gap-6 text-sm text-grey">
-              <div className="flex items-center gap-2">
-                <CheckCircleIcon className="w-5 h-5 text-success" />
-                <span>SOC 2 Ready</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircleIcon className="w-5 h-5 text-success" />
-                <span>GDPR Compliant</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right: Illustration */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mt-8 md:mt-0"
-          >
-            <div className="bg-gradient-to-br from-slate to-midnight border border-cyan/30 rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm">
-              {/* Mock Dashboard */}
-              <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
-                  <h3 className="text-white font-semibold text-sm sm:text-base">Security Dashboard</h3>
-                  <Badge variant="success" className="text-xs">All Systems Secure</Badge>
-                </div>
-
-                {/* Stats Grid */}
-                <div className="grid grid-cols-3 gap-2 sm:gap-4">
-                  <div className="bg-midnight/50 p-2 sm:p-3 md:p-4 rounded-lg border border-success/30">
-                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-success">98%</div>
-                    <div className="text-[10px] sm:text-xs text-grey">Uptime</div>
-                  </div>
-                  <div className="bg-midnight/50 p-2 sm:p-3 md:p-4 rounded-lg border border-cyan/30">
-                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-cyan">124</div>
-                    <div className="text-[10px] sm:text-xs text-grey">Blocked</div>
-                  </div>
-                  <div className="bg-midnight/50 p-2 sm:p-3 md:p-4 rounded-lg border border-warning/30">
-                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-warning">0</div>
-                    <div className="text-[10px] sm:text-xs text-grey">Alerts</div>
-                  </div>
-                </div>
-
-                {/* Activity Feed */}
-                <div className="bg-midnight/30 p-3 sm:p-4 rounded-lg space-y-2">
-                  <div className="flex items-center gap-2 text-xs sm:text-sm">
-                    <div className="w-2 h-2 bg-success rounded-full animate-pulse flex-shrink-0" />
-                    <span className="text-grey truncate">Firewall updated successfully</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs sm:text-sm">
-                    <div className="w-2 h-2 bg-cyan rounded-full animate-pulse flex-shrink-0" />
-                    <span className="text-grey truncate">Backup completed: 2.4GB</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs sm:text-sm">
-                    <div className="w-2 h-2 bg-success rounded-full animate-pulse flex-shrink-0" />
-                    <span className="text-grey truncate">Security scan: No threats</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -318,7 +255,7 @@ export default function Home() {
                 'Automated alerts would have caught the intrusion in minutes',
                 'Backup systems would have prevented data loss',
                 'Incident response plan would have controlled the narrative',
-                'SOC 2 compliance would have reassured enterprise clients',
+                'Compliance certifications would have reassured enterprise clients',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircleIcon className="w-6 h-6 text-success flex-shrink-0 mt-0.5" />
@@ -453,10 +390,10 @@ export default function Home() {
           </div>
 
           <div className="border-t border-slate pt-8 text-center text-grey text-sm">
-            <p className="mb-2">6781 cannoe road, Celina, Texas 75070</p>
+            <p className="mb-2">Texas, United States</p>
             <p className="mb-2">
-              <a href="mailto:vk2045@whanex.com" className="hover:text-cyan transition-colors">
-                vk2045@whanex.com
+              <a href="mailto:agent@whanex.io" className="hover:text-cyan transition-colors">
+                agent@whanex.io
               </a>
             </p>
             <p>&copy; 2025 Whanex. All rights reserved.</p>

@@ -55,7 +55,7 @@ export default function Solutions() {
     {
       title: 'Faster Sales Cycles',
       description:
-        'Enterprise clients demand security questionnaires and compliance proof. Having SOC 2, GDPR, and HIPAA ready accelerates deals.',
+        'Enterprise clients demand security questionnaires and compliance proof. Having industry-standard certifications ready accelerates deals.',
     },
     {
       title: 'Higher Valuations',

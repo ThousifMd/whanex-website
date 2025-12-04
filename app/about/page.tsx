@@ -209,7 +209,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto bg-midnight border border-cyan/20 rounded-xl p-8 md:p-12">
           <div className="space-y-6 text-grey">
             <p>
-              Our team has worked at startups that scaled from seed to Series C, dealt with SOC 2 audits at 3am, and responded to incidents that threatened to shut down companies.
+              Our team has worked at startups that scaled from seed to Series C, dealt with compliance audits at 3am, and responded to incidents that threatened to shut down companies.
             </p>
             <p>
               We've also worked at big security firms and saw firsthand how poorly they serve early-stage companies. We left to build something better.
